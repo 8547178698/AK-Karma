@@ -1,59 +1,83 @@
-<div align="center">
-<img 
-src="Devutty.jpg" alt="img" width="220" height="220"/>
-</p>
-        
 
+<div align="center">
+  <img border-radius: 15px src="Devutty.jpg"width="200" height="200"/>
+  <p align="center">
+    
+    
+<a href="#"><img title="Devutty_v2" src="https://img.shields.io/badge/Devutty_v2-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+</p>
+  <p align="center">
+<a href=https://github.com/TheBlackLion17"><img title="Author" src="https://img.shields.io/badge/Author-(hunk!nd3 p4d4y41!-Devutty_v2?color=blue&style=for-the-badge&logo=whatsapp"></a>
+</p>
 </div>
 <p align="center">
-ᴘʀᴏᴊᴇᴄᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ <a href="https://github.com/TheBlackLion17">TheBlackLion17</a>
+Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to make it public
     <br>
        | © |
-        Reserved 
+        Reserved |
     <br> 
 </p>
 
-- - -
-
+## Setup
 <div align="center">
 
-### [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=san+serif&color=%23F786EB&size=15&lines=We+Cloned+A+Base+Added+Some+Scripts;Now+U+Can+Deploy+Ur+Self%2C+Enjoy+The+Service)](https://git.io/typing-svg)
-<p align="center">
+  ### Simple Method
+  
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/Devutty_v2) 
+  
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@TheBlackLion17/Devutty_v2?v=1)
+  
+### The Hard Method
+```js
+GET QR
+$ apt install git
+$ apt install nodejs --fix-missing
+$ git clone https://github.com/TheBlackLion17/Devutty_v2
+$ cd Devutty_v2
+$ npm install @adiwajshing/baileys
+$ npm install chalk
+$ node Devutty.js
+```
+      
+```js
+SETUP
+$ git clone https://github.com/TheBlackLion17/Devutty_v2
+$ cd Devutty_v2
+$ npm i
+$ node Devutty.js
+```
 
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@TheBlackLion17/Devutty_v2-Qr)
+----
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://bit.ly/3G36is6)
+  <p align="center">
+  <a href="https://github.com/TheBlackLion17/Devutty_v2">
     
-- - -
-</
-</div>
-<div align="center">
-<a href="https://zaramwol.yolasite.com/">   𒊹︎︎︎𝐏𝐑𝐄𝐒𝐒 𝐇𝐄𝐑𝐄 𝐓𝐎 𝐕𝐈𝐒𝐈𝐓 𝐎𝐔𝐑 𝐖𝐄𝐁𝐒𝐈𝐓𝐄</a>
+<a href="https:https://github.com/TheBlackLion17?tab=followers">
+<img src="https://img.shields.io/github/repo-size/TheBlackLion17/Devutty_v2?color=green&label=Repo%20total%20size&style=plastic">
+<p align="center">
+<a href="https://github.com/TheBlackLion17/followers"
+<img title="Followers" src="https://img.shields.io/github/followers/TheBlackLion17?color=blue&style=flat-square"></a>
+<a href="https://github.com/TheBlackLion17/Devutty_v2/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/TheBlackLion17/Devutty_v2?color=blue&style=flat-square"></a>
+<a href="https://github.com/TheBlackLion17/Devutty_v2/network/members"><img title="Forks" src="https://img.shields.io/github/forks/TheBlackLion17/Devutty_v2?color=blue&style=flat-square"></a>
+<a href="https://github.com/TheBlackLion17/Devutty_v2/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/TheBlackLion17/Devutty_v2?label=Watchers&color=blue&style=flat-square"></a>
+</p>
+
+<p align="center">
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=TheBlackLion17&show_icons=true&theme=dark&locale=en" alt="TheBlackLion17" /></p>
+    
+## 📢 Guide
+Click WA logo to Join Support Group 👇
     <br>
-</p>
-<div align="center">
-<details>
-    <summary><b>𝐏𝐑𝐄𝐒𝐒 𝐇𝐄𝐑𝐄 𝐓𝐎 𝐊𝐍𝐎𝐖 𝐌𝐎𝐑𝐄 𝐓𝐇𝐈𝐍𝐆𝐒</b></summary>
-
-</p>
-
-```
-If Repl.it not working Try Termux for Qr scanning.
-    Just Copy the Link Below in Termux
-
-     bash <(curl -L https://t.ly/tHxh)
-```
-## F.A.Q
-Answer a few frequently asked questions;
-### Can you read my messages?
-This project is open source so all the codes are clear. Neither less nor more; you can look what you want. **We absolutely do not have access to your accounts.**
-
-### What about our security?
-If you are concerned about security, you can install it on your own computer. If you think someone else has captured your data, simply click on **Whatsapp> Three Dots> Whatsapp Web> Logout** from all sessions button.
-
-### Is it paid?
-**Of course not.** It will never happen. But you can donate to us. You can reach me via [Telegram](https://t.me/fusuf) .
-
+<br>
+  [![join](https://github.com/TheBlackLion17/Devutty_v2/blob/master/WhatsAsena.png)](https://chat.whatsapp.com/BRPbS6JHUoCE480MpLLM5z)
+  <div align="center">
+       
+  ![GitHub Activity Graph](https://activity-graph.herokuapp.com/graph?username=TheBlackLion17&bg_color=000000&color=4fff67&line=4fff67&point=ffffff&area=true&hide_border=true)
+  </div>
+ 
+  
+  [![Matrix SVG](https://raw.githubusercontent.com/rodrigograca31/rodrigograca31/master/matrix.svg)](https://chat.whatsapp.com/BRPbS6JHUoCE480MpLLM5z)
+                     
 ### ⚠️ Warning! 
 ```
 Due to Userbot; Your WhatsApp account may be banned.
@@ -61,15 +85,16 @@ This is an open source project, you are responsible for everything you do.
 Absolutely, Asena executives do not accept responsibility.
 By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
-  
+
 ## Developers
   <div align="center">
     
-  [![TheBlackLion17](https://github.com/TheBlackLion17.png?size=100)]
-----|----|----
-[The](https://github.com/TheBlackLion17)
-Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
+[![TheBlackLion17](https://github.com/TheBlackLion17.png?size=100)](https://github.com/TheBlackLion17) | [![Farhan-Dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz) | [![TOXIC-DEVIL](https://github.com/TOXIC-DEVIL.png?size=100)](https://github.com/TOXIC-DEVIL) |  [![TOXIC4L!3N](https://github.com/Alien-alfa.png?size=100)](https://github.com/AI-VIKI) | [![afnanplk](https://github.com/afnanplk.png?size=100)](https://github.com/afnanplk) 
+----|----|----|----|----
+[TheBlackLion17](https://github.com/TheBlackLion17) | [farhan-dqz](https://github.com/farhan-dqz) | [TOXIC-DEVIL](https://github.com/TOXIC-DEVIL) | [TOXIC4L!3N](https://github.com/AI-VIKI) | [afnanplk](https://github.com/afnanplk) 
+Modifiying as public | Developer, Base, Bug Fixes, Modules| Re-Developer, Bug Fixes, Modules, Commits |  Modifiying  as   public | Bug Fixes, Modules 
   </div>
+    
 
 
 ## License
