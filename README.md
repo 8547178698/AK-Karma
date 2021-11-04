@@ -7,7 +7,7 @@
 <a href="#"><img title="Devutty_v2" src="https://img.shields.io/badge/Devutty_v2-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
   <p align="center">
-<a href=https://github.com/TheBlackLion17"><img title="Author" src="https://img.shields.io/badge/Author-(hunk!nd3 p4d4y41!-Devutty_v2?color=blue&style=for-the-badge&logo=whatsapp"></a>
+<a href=https://github.com/TheBlackLion17"><img title="Author" src="https://img.shields.io/badge/Author-(hunk!nd3 p4d4y41!-LIZAMWOL?color=blue&style=for-the-badge&logo=whatsapp"></a>
 </p>
 </div>
 <p align="center">
@@ -25,7 +25,7 @@ Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to
   
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/Devutty_v2) 
   
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@theblacklion/Devutty?v=2)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@TheBlackLion17/LizaMwol?v=1)
   
 ### The Hard Method
 ```js
@@ -36,7 +36,7 @@ $ git clone https://github.com/TheBlackLion17/Devutty_v2
 $ cd Devutty_v2
 $ npm install @adiwajshing/baileys
 $ npm install chalk
-$ node Devutty.js
+$ node Liza.js
 ```
       
 ```js
@@ -44,7 +44,7 @@ SETUP
 $ git clone https://github.com/TheBlackLion17/Devutty_v2
 $ cd Devutty_v2
 $ npm i
-$ node Devutty.js
+$ node Liza.js
 ```
 
 ----
