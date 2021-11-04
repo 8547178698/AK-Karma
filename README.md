@@ -1,77 +1,59 @@
-
 <div align="center">
-  <img border-radius: 15px src="Devutty.jpg" width="200" height="200"/>
-  <p align="center">
-<a href="#"><img title="Karnan" src="https://img.shields.io/badge/Karnan-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<img 
+src="Devutty.jpg" alt="img" width="220" height="220"/>
 </p>
-  <p align="center">
-<a href="https://github.com/TheBlackLion17"><img title="Author" src="https://img.shields.io/badge/Author-TheBlackLion17/Karnan?color=blue&style=for-the-badge&logo=whatsapp"></a>
-</p>
+        
+
 </div>
 <p align="center">
-Project created by <a href="https://github.com/TheBlackLion17">TheBlackLion17</a> to make it public
+ᴘʀᴏᴊᴇᴄᴛ ᴄʀᴇᴀᴛᴇᴅ ʙʏ <a href="https://github.com/TheBlackLion17">TheBlackLion17</a>
     <br>
        | © |
-        Reserved |
+        Reserved 
     <br> 
 </p>
 
-![Profile Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/farhan-dqz/JulieMwol&title=Profile%20Views)
+- - -
 
-## Setup
-<div align="center"> 
+<div align="center">
 
-  ### Simple Method
-  
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/Karnan) 
-  
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@Karnam/Karnan)
-  
-### The Hard Method
-```js
-GET QR
-$ apt install git
-$ apt install nodejs --fix-missing
-$ git clone https://github.com/TheBlackLion17/Karnan
-$ cd Karnan
-$ npm install @adiwajshing/baileys
-$ npm install chalk
-$ node julie.js
-```
-      
-```js
-SETUP
-$ git clone https://github.com/TheBlackLion17/Karnan
-$ cd Karnan
-$ npm i
-$ node julie.js
-```
-
-----
-
-  <p align="center">
-  <a href="httsp://github.com/farhan-dqz/JulieMwol">
-    
-<a href="https://github.com/farhan-dqz/followers">
-<img src="https://img.shields.io/github/repo-size/farhan-dqz/Julie-Mwol?color=green&label=Repo%20total%20size&style=plastic">
+### [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=san+serif&color=%23F786EB&size=15&lines=We+Cloned+A+Base+Added+Some+Scripts;Now+U+Can+Deploy+Ur+Self%2C+Enjoy+The+Service)](https://git.io/typing-svg)
 <p align="center">
-<a href="https://github.com/farhan-dqz/followers"
-<img title="Followers" src="https://img.shields.io/github/followers/farhan-dqz?color=blue&style=flat-square"></a>
-<a href="https://github.com/farhan-dqz/JulieMwol/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/farhan-dqz/JulieMwol?color=blue&style=flat-square"></a>
-<a href="https://github.com/farhan-dqz/JulieMwol/network/members"><img title="Forks" src="https://img.shields.io/github/forks/farhan-dqz/JulieMwol?color=blue&style=flat-square"></a>
-<a href="https://github.com/farhan-dqz/JulieMwol/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/farhan-dqz/JulieMwol?label=Watchers&color=blue&style=flat-square"></a>
+
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@TheBlackLion17/Devutty_v2-Qr)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://bit.ly/3G36is6)
+    
+- - -
+</
+</div>
+<div align="center">
+<a href="https://zaramwol.yolasite.com/">   𒊹︎︎︎𝐏𝐑𝐄𝐒𝐒 𝐇𝐄𝐑𝐄 𝐓𝐎 𝐕𝐈𝐒𝐈𝐓 𝐎𝐔𝐑 𝐖𝐄𝐁𝐒𝐈𝐓𝐄</a>
+    <br>
+</p>
+<div align="center">
+<details>
+    <summary><b>𝐏𝐑𝐄𝐒𝐒 𝐇𝐄𝐑𝐄 𝐓𝐎 𝐊𝐍𝐎𝐖 𝐌𝐎𝐑𝐄 𝐓𝐇𝐈𝐍𝐆𝐒</b></summary>
+
 </p>
 
-## 📢 Guide
-Click WA logo to Join Support Group 👇
-    <br>
-<br>
-  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/DsWqJWHRxgU16kvxFvLYL6)
-  <div align="center">
-       
-  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=TheBlackLion17&repo=Karnan&theme=nightowl)](https://github.com/TheBlackLion17/Karnan)
-  </div>
-    
+```
+If Repl.it not working Try Termux for Qr scanning.
+    Just Copy the Link Below in Termux
+
+     bash <(curl -L https://t.ly/tHxh)
+```
+## F.A.Q
+Answer a few frequently asked questions;
+### Can you read my messages?
+This project is open source so all the codes are clear. Neither less nor more; you can look what you want. **We absolutely do not have access to your accounts.**
+
+### What about our security?
+If you are concerned about security, you can install it on your own computer. If you think someone else has captured your data, simply click on **Whatsapp> Three Dots> Whatsapp Web> Logout** from all sessions button.
+
+### Is it paid?
+**Of course not.** It will never happen. But you can donate to us. You can reach me via [Telegram](https://t.me/fusuf) .
+
 ### ⚠️ Warning! 
 ```
 Due to Userbot; Your WhatsApp account may be banned.
@@ -79,16 +61,15 @@ This is an open source project, you are responsible for everything you do.
 Absolutely, Asena executives do not accept responsibility.
 By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
-
+  
 ## Developers
   <div align="center">
     
-  [![Farhan-Dqz](https://github.com/farhan-dqz.png?size=100)](https://github.com/farhan-dqz) | [![TheBlackLion17](https://github.com/TheBlackLion17.png?size=100)](https://github.com/TOXIC-DEVIL) |  [![TOXIC4L!3N](https://github.com/Alien-alfa.png?size=100)](https://github.com/AI-VIKI) | [![afnanplk](https://github.com/afnanplk.png?size=100)](https://github.com/afnanplk) 
-----|----|----|----
-[farhan-dqz](https://github.com/farhan-dqz) | [TheBlackLion17](https://github.com/TheBlackLion17) | [TOXIC4L!3N](https://github.com/AI-VIKI) | [afnanplk](https://github.com/afnanplk) 
-Developer, Base, Bug Fixes, Modules| Re-Developer, Bug Fixes, Modules, Commits |  Modifiying  as   public | Bug Fixes, Modules 
+  [![TheBlackLion17](https://github.com/TheBlackLion17.png?size=100)]
+----|----|----
+[The](https://github.com/TheBlackLion17)
+Base, Bug Fixes, Modules | Modifiying  as   public | Bug Fixes, Modules
   </div>
-    
 
 
 ## License
@@ -96,4 +77,3 @@ This project is protected by `GNU General Public Licence v3.0` license.
 
 ### Disclaimer
 `WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
-
