@@ -25,7 +25,7 @@ Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to
   
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/Devutty_v2) 
   
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@TheBlackLion17/Devutty_v2?v=1)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@theblacklion17/Devutty?v=2)
   
 ### The Hard Method
 ```js
