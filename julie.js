@@ -1,59 +1,79 @@
-/* Copyright (C) 2020 Yusuf Usta.
+console.log('✅ STARTING...')
 
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
+import { join, dirname } from 'path'
+import { createRequire } from 'module';
+import { fileURLToPath } from 'url'
+import { setupMaster, fork } from 'cluster'
+import { watchFile, unwatchFile } from 'fs'
+import cfonts from 'cfonts';
+import { createInterface } from 'readline'
+import yargs from 'yargs'
 
-WhatsAsena - Yusuf Usta
-*/
+// https://stackoverflow.com/a/50052194
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
+const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
+const { say } = cfonts
+const rl = createInterface(process.stdin, process.stdout)
 
-const chalk = require('chalk');
-const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/baileys');
-const {StringSession} = require('./julie/');
-const fs = require('fs');
+say('ABHISHEK-SER', {
+  font: 'chrome',
+  align: 'center',
+  gradient: ['red', 'magenta']
+})
+say(`'${name}' By @Devutty_v2._`, {
+  font: 'console',
+  align: 'center',
+  gradient: ['red', 'magenta']
+})
 
-async function whatsAsena () {
-    const conn = new WAConnection();
-    const Session = new StringSession();  
-    conn.version = [3, 3234,9]
-    conn.logger.level = 'warn';
-    conn.regenerateQRIntervalMs = 50000;
-    
-    conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
-${chalk.white.italic('AsenaString Kodu Alıcı')}
-
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
-    });
-    
-
-    conn.on('open', async () => {
-        var st = Session.createStringSession(conn.base64EncodedAuthInfo());
-        console.log(
-            chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
-        );
-        
-        if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
-        }
-        if (conn.user.jid.startsWith('90')) {
-            await conn.sendMessage(conn.user.jid,st, MessageType.text)
-            await conn.sendMessage(conn.user.jid,'*Bu Kodu Kimseyle Paylaşmayın!*', MessageType.text)
-            console.log(
-                chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
-            );
-        }
-        else {
-            await conn.sendMessage(conn.user.jid,st, MessageType.text)
-            await conn.sendMessage(conn.user.jid,'*Do Not Share This Code With Anyone!*', MessageType.text)
-            console.log(
-                chalk.blue.bold('If you are installing locale, you can start the bot with node bot.js')
-            );
-        }
-        
-        process.exit(0);
-    });
-
-    await conn.connect();
+var isRunning = false
+/**
+ * Start a js file
+ * @param {String} file `path/to/file`
+ */
+function start(file) {
+  if (isRunning) return
+  isRunning = true
+  let args = [join(__dirname, file), ...process.argv.slice(2)]
+  say([process.argv[0], ...args].join(' '), {
+    font: 'console',
+    align: 'center',
+    gradient: ['red', 'magenta']
+  })
+  setupMaster({
+    exec: args[0],
+    args: args.slice(1),
+  })
+  let p = fork()
+  p.on('message', data => {
+    console.log('[RECEIVED]', data)
+    switch (data) {
+      case 'reset':
+        p.process.kill()
+        isRunning = false
+        start.apply(this, arguments)
+        break
+      case 'uptime':
+        p.send(process.uptime())
+        break
+    }
+  })
+  p.on('exit', (_, code) => {
+    isRunning = false
+    console.error('❎ An Unexpected Error Occurred:', code)
+    if (code === 0) return
+    watchFile(args[0], () => {
+      unwatchFile(args[0])
+      start(file)
+    })
+  })
+  let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+  if (!opts['test'])
+    if (!rl.listenerCount()) rl.on('line', line => {
+      p.emit('message', line.trim())
+    })
+  // console.log(p)
 }
 
-whatsAsena()
+start('main.js')
