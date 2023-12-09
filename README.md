@@ -23,7 +23,7 @@ Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to
 
   ### Simple Method
   
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/LizaMwil_v1) 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/LizaMwil_v1)  
   
 ### Deploy Replit
 
