@@ -1,10 +1,19 @@
-FROM fusuf/whatsasena:latest
+FROM node:lts-buster
 
-RUN git clone https://github.com/TheBlackLion17/Devutty/root/WhatsAsenaDuplicated
-WORKDIR /root/WhatsAsenaDuplicated/
-ENV TZ=Asia/Kolkata
-RUN npm install supervisor -g
-RUN yarn install --no-audit
-RUN git clone https://github.com/TheBlackLion17/media
+RUN apt-get update && \
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
 
-CMD ["node", "bot.js"]
+COPY package.json .
+
+RUN npm install && npm install qrcode-terminal
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["node", "index.js", "--server
