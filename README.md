@@ -25,7 +25,9 @@ Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to
   
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/TheBlackLion17/LizaMwil_v1) 
   
-[![Run on Repl.it]([https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@TheBlackLion17/LizaMwol?v=1](https://replit.com/@TheBlackLion17/Devuttyv2-5))
+2. Scan The Qr Code And Upload abhi.data.json To Your Fork🎯(Will Recieve It On Your Bot Number After Scanning)
+    <br>
+<a href="https://abhishek-ser-web.vercel.app/"><img title="ABHISHEK-SER Scan Qr" src="https://img.shields.io/badge/SCAN QR CODE-h?color=black&style=for-the-badge&logo=msi"></a>
   
 ### The Hard Method
 ```js
