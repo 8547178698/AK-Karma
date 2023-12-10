@@ -29,7 +29,7 @@ Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to
 ### Deploy Replit
 
 <a href="[https://replit.com/github/TheBlackLion17/Devutty_v2](https://replit.com/@TheBlackLion17/Devuttyv2-5?v=1)"><img title="ABHISHEK-SER Deploy Replit" src="https://img.shields.io/badge/DEPLOY REPLIT-h?color=black&style=for-the-badge&logo=Replit"></a>
-
+[![Run on Repl.it](https://replit.com/github/TheBlackLion17/Devutty_v2)](https://replit.com/@TheBlackLion17/Devuttyv2)
   
 ### The Hard Method
 ```js
