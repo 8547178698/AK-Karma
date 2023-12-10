@@ -20,4 +20,4 @@ const start = async () => {
     logger.error(error)
   }
 }
-start(bot.js)
+start()
