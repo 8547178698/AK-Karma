@@ -67,12 +67,12 @@ async function start(fileName) {
 }
 
 // Start the 'Guru.js' process
-start('Guru.js');
+start('Devutty.js');
 
 // Event handlers for unhandled rejections and uncaught exceptions
 process.on('unhandledRejection', () => {
   console.error(chalk.red('Unhandled promise rejection. Bot will restart...'));
-  start('Guru.js');
+  start('Devutty.js');
 });
 
 process.on('uncaughtException', (err) => {
