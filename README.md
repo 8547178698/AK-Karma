@@ -35,17 +35,16 @@ $ apt install git
 $ apt install nodejs --fix-missing
 $ git clone https://github.com/TheBlackLion17/Devutty_v2
 $ cd Devutty_v2
-$ npm install @adiwajshing/baileys
-$ npm install chalk
-$ node index.js
+$ npm install
+$ npm start
 ```
       
 ```js
 SETUP
 $ git clone https://github.com/TheBlackLion17/Devutty_v2
 $ cd Devutty_v2
-$ npm i
-$ node index.js
+$ npm install
+$ npm start
 ```
 
 ----
