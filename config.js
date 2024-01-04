@@ -1,80 +1,82 @@
-const toBool = (x) => x == 'true'
-const { Sequelize } = require('sequelize')
-const { existsSync } = require('fs')
-const path = require('path')
-const configPath = path.join(__dirname, './config.env')
-const databasePath = path.join(__dirname, './database.db')
-if (existsSync(configPath)) require('dotenv').config({ path: configPath })
-const DATABASE_URL =
-  process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
-module.exports = {
-  VERSION: require('./package.json').version,
-  SESSION_ID: (process.env.SESSION_ID || '').trim(),
-  DATABASE:
-    DATABASE_URL === databasePath
-      ? new Sequelize({
-          dialect: 'sqlite',
-          storage: DATABASE_URL,
-          logging: false,
-        })
-      : new Sequelize(DATABASE_URL, {
-          dialect: 'postgres',
-          ssl: true,
-          protocol: 'postgres',
-          dialectOptions: {
-            native: true,
-            ssl: { require: true, rejectUnauthorized: false },
-          },
-          logging: false,
-        }),
-  HANDLERS: (process.env.PREFIX || '^[.,!]').trim(),
-  SUDO: process.env.SUDO || '',
-  HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
-  HEROKU_API_KEY: process.env.HEROKU_API_KEY,
-  BRANCH: 'master',
-  STICKER_PACKNAME: process.env.STICKER_PACKNAME || '❤️,LyFE',
-  ALWAYS_ONLINE: toBool(process.env.ALWAYS_ONLINE),
-  LOG_MSG: toBool(process.env.LOG_MSG) || false,
-  RMBG_KEY: process.env.RMBG_KEY || 'null',
-  BAILEYS_LOG_LVL: process.env.BAILEYS_LOG_LVL || 'silent',
-  LANG: (process.env.LANGUAG || 'en').toLowerCase(),
-  WARN_LIMIT: process.env.WARN_LIMIT || 3,
-  FORCE_LOGOUT: toBool(process.env.FORCE_LOGOUT),
-  BRAINSHOP: process.env.BRAINSHOP || '159501,6pq8dPiYt7PdqHz3',
-  DIS_BOT: process.env.DISABLE_BOT || 'null',
-  ANTILINK_MSG: process.env.ANTILINK_MSG || '_Antilink Detected &mention kicked_',
-  ANTISPAM_MSG: process.env.ANTISPAM_MSG || '_Antispam Detected &mention kicked_',
-  ANTIWORDS_MSG: process.env.ANTIWORDS_MSG || '_AntiWord Detected &mention kicked_',
-  ANTIWORDS: process.env.ANTIWORDS || 'word',
-  MENTION: process.env.MENTION || '',
-  SS_TOKEN: process.env.SS_TOKEN || '',
-  MAX_UPLOAD: process.env.MAX_UPLOAD || 230,
-  REJECT_CALL: toBool(process.env.REJECT_CALL),
-  VPS: toBool(process.env.VPS),
-  AUTO_STATUS_VIEW: (process.env.AUTO_STATUS_VIEW || 'false').trim(),
-  SEND_READ: toBool(process.env.SEND_READ),
-  KOYEB: toBool(process.env.KOYEB),
-  KOYEB_NAME: (process.env.KOYEB_NAME || '').trim(),
-  KOYEB_API: (process.env.KOYEB_API || '').trim(),
-  AJOIN: toBool(process.env.AJOIN),
-  GPT: (process.env.GPT || 'free').trim(),
-  MODEL: (process.env.MODEL || 'gpt-3.5-turbo').trim(),
-  APPROVE: (process.env.APPROVE || '').trim(),
-  ANTI_DELETE: (process.env.ANTI_DELETE || 'null').trim(),
-  PERSONAL_MESSAGE: process.env.PERSONAL_MESSAGE || 'null',
-  DISABLE_START_MESSAGE: process.env.DISABLE_START_MESSAGE
-    ? toBool(process.env.DISABLE_START_MESSAGE)
-    : false,
-  ANTI_BOT: (process.env.ANTI_BOT || 'off').trim(),
-  ANTI_BOT_MESSAGE: process.env.ANTI_BOT_MESSAGE || '&mention removed',
-  WARN_MESSAGE:
-    process.env.WARN_MESSAGE ||
-    '⚠️WARNING⚠️\n*User :* &mention\n*Warn :* &warn\n*Remaining :* &remaining',
-  WARN_RESET_MESSAGE:
-    process.env.WARN_RESET_MESSAGE || `WARN RESET\nUser : &mention\nRemaining : &remaining`,
-  WARN_KICK_MESSAGE: process.env.WARN_KICK_MESSAGE || '&mention kicked',
-  TRUECALLER: process.env.TRUECALLER,
-  DELETE_TYPE: (process.env.DELETE_TYPE || '').trim(),
-  LIST_TYPE: (process.env.LIST_TYPE || 'poll').trim(),
-  BING_COOKIE: (process.env.BING_COOKIE || '').trim(),
+import { watchFile, unwatchFile } from 'fs'
+import chalk from 'chalk'
+import { fileURLToPath } from 'url'
+import fs from 'fs'
+import fetch from 'node-fetch'
+import axios from 'axios'
+
+
+global.owner = [
+  ['918138993875', 'Devutty', true],
+  ['6281255369012', 'Ash', flase], 
+  [''] 
+] //Number of owners
+
+//global.pairingNumber = "" //put your bot number here
+
+global.mods = ['918138993875'] 
+global.prems = ['918138993875']
+global.allowed = ['918138993875']
+global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
+global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
+global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
+global.keysxteam = keysxteammm[Math.floor(keysxteammm.length * Math.random())]
+global.keysneoxrrr = ['5VC9rvNx', 'cfALv5']
+global.keysneoxr = keysneoxrrr[Math.floor(keysneoxrrr.length * Math.random())]
+global.lolkeysapi = ['GataDios']
+
+global.APIs = { // API Prefix
+  // name: 'https://website'
+  xteam: 'https://api.xteam.xyz', 
+  dzx: 'https://api.dhamzxploit.my.id',
+  lol: 'https://api.lolhuman.xyz',
+  violetics: 'https://violetics.pw',
+  neoxr: 'https://api.neoxr.my.id',
+  zenzapis: 'https://zenzapis.xyz',
+  akuari: 'https://api.akuari.my.id',
+  akuari2: 'https://apimu.my.id',
+  nrtm: 'https://fg-nrtm.ddns.net',
+  bg: 'http://bochil.ddns.net',
+  fgmods: 'https://api-fgmods.ddns.net'
 }
+global.APIKeys = { // APIKey Here
+  // 'https://website': 'apikey'
+  'https://api.xteam.xyz': 'd90a9e986e18778b',
+  'https://api.lolhuman.xyz': '85faf717d0545d14074659ad',
+  'https://api.neoxr.my.id': `${keysneoxr}`,	
+  'https://violetics.pw': 'beta',
+  'https://zenzapis.xyz': `${keysxxx}`, 
+  'https://api-fgmods.ddns.net': 'fg-dylux'
+}
+
+// Sticker WM
+global.botname = '𝑫𝒆𝒗𝒖𝒕𝒕𝒚'
+global.premium = 'true'
+global.packname = '𝑫𝒆𝒗𝒖𝒕𝒕𝒚┃ᴮᴼᵀ' 
+global.author = '@TheBlackLion17' 
+global.menuvid = 'https://telegra.ph/file/17036c0f699a0c6f84ab0.mp4'
+global.igfg = '▢ Follow on github\nhttps://github.com/TheBlackLion17/DevuttyV1\n' 
+global.dygp = 'https://github.com/TheBlackLion17/DevuttyV1'
+global.fgsc = 'https://github.com/TheBlackLion17/DevuttyV1' 
+global.fgyt = 'https://youtube.com/@Asliguru'
+global.fgpyp = 'https://youtube.com/@Asliguru'
+global.fglog = 'https://telegra.ph/file/3b64ff94f75775182c922.jpg' 
+global.thumb = fs.readFileSync('https://telegra.ph/file/3b64ff94f75775182c922.jpg')
+
+
+global.wait = '*⌛ _Charging..._*\n*▰▰▰▱▱▱▱▱*'
+global.rwait = '⌛'
+global.dmoji = '🤭'
+global.done = '✅'
+global.error = '❌' 
+global.xmoji = '🔥' 
+
+global.multiplier = 69 
+global.maxwarn = '3' // máxima advertencias
+
+let file = fileURLToPath(import.meta.url)
+watchFile(file, () => {
+  unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  import(`${file}?update=${Date.now()}`)
+})
