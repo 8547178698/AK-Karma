@@ -1,82 +1,79 @@
-// Import necessary modules
-import os from 'os';
-import express from 'express';
-import { spawn } from 'child_process';
-import path from 'path';
+console.log('✅ STARTING...')
+
+import { join, dirname } from 'path'
 import { createRequire } from 'module';
-import fs, { promises as fsPromises } from 'fs';
-import chalk from 'chalk';
+import { fileURLToPath } from 'url'
+import { setupMaster, fork } from 'cluster'
+import { watchFile, unwatchFile } from 'fs'
 import cfonts from 'cfonts';
+import { createInterface } from 'readline'
+import yargs from 'yargs'
 
-const { say } = cfonts;
+// https://stackoverflow.com/a/50052194
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const require = createRequire(__dirname) // Bring in the ability to create the 'require' method
+const { name, author } = require(join(__dirname, './package.json')) // https://www.stefanjudis.com/snippets/how-to-import-json-files-in-es-modules-node-js/
+const { say } = cfonts
+const rl = createInterface(process.stdin, process.stdout)
 
-// Function to send HTML files
-const sendHtml = (res, next, fileName) => {
-  res.sendFile(path.join(htmlDir, fileName + '.html'));
-};
+say('ABHISHEK -  SER', {
+  font: 'chrome',
+  align: 'center',
+  gradient: ['red', 'magenta']
+})
+say(`'${name}' By @TheBlackLion17`, {
+  font: 'console',
+  align: 'center',
+  gradient: ['red', 'magenta']
+})
 
-// Initialize Express app
-const app = express();
-const port = process.env.PORT || 8080;
-const basePath = new URL(import.meta.url).pathname;
-const htmlDir = path.join(path.dirname(basePath), 'Assets');
-
-// Define routes
-app.get('/', (req, res) => sendHtml(res, next, 'someFile'));
-app.listen(port, () => console.log(chalk.yellow('Server is open on port ' + port)));
-
-let isRunning = false;
-
-// Function to start a child process
-async function start(fileName) {
-  if (isRunning) return;
-  isRunning = true;
-
-  const baseURL = new URL(import.meta.url).pathname;
-  const filePath = path.join(path.dirname(baseURL), fileName);
-  const args = [filePath, ...process.argv.slice(2)];
-
-  const childProcess = spawn(process.argv[0], args, { stdio: ['inherit', 'inherit', 'inherit', 'pipe'] });
-
-  childProcess.on('message', (msg) => {
-    console.log(chalk.cyan('✔️RECEIVED ' + msg));
-  });
-
-  childProcess.on('exit', (code) => {
-    isRunning = false;
-    console.log(chalk.green('Exited with code: ' + code));
-    if (code === 0) return;
-
-    fsPromises.readFile(filePath, 'utf8')
-      .then((data) => {
-        console.log(chalk.magenta(data));
-        start(fileName);
-      })
-      .catch((err) => console.error(chalk.red('Error reading file: ' + err)));
-  });
-
-  const pluginDir = path.join(path.dirname(baseURL), 'Plugins');
-  fs.readdir(pluginDir, async (err, files) => {
-    if (err) {
-      console.error(chalk.red('Error reading plugins folder: ' + err));
-      return;
+var isRunning = false
+/**
+ * Start a js file
+ * @param {String} file `path/to/file`
+ */
+function start(file) {
+  if (isRunning) return
+  isRunning = true
+  let args = [join(__dirname, file), ...process.argv.slice(2)]
+  say([process.argv[0], ...args].join(' '), {
+    font: 'console',
+    align: 'center',
+    gradient: ['red', 'magenta']
+  })
+  setupMaster({
+    exec: args[0],
+    args: args.slice(1),
+  })
+  let p = fork()
+  p.on('message', data => {
+    console.log('[RECEIVED]', data)
+    switch (data) {
+      case 'reset':
+        p.process.kill()
+        isRunning = false
+        start.apply(this, arguments)
+        break
+      case 'uptime':
+        p.send(process.uptime())
+        break
     }
-
-    console.log(chalk.green('Installed ' + files.length + ' plugins.'));
-  });
+  })
+  p.on('exit', (_, code) => {
+    isRunning = false
+    console.error('❎ An unexpected error occurred:', code)
+    if (code === 0) return
+    watchFile(args[0], () => {
+      unwatchFile(args[0])
+      start(file)
+    })
+  })
+  let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+  if (!opts['test'])
+    if (!rl.listenerCount()) rl.on('line', line => {
+      p.emit('message', line.trim())
+    })
+  // console.log(p)
 }
 
-// Start the 'Guru.js' process
-start('Devutty.js');
-
-// Event handlers for unhandled rejections and uncaught exceptions
-process.on('unhandledRejection', () => {
-  console.error(chalk.red('Unhandled promise rejection. Bot will restart...'));
-  start('Devutty.js');
-});
-
-process.on('uncaughtException', (err) => {
-  console.error(chalk.red('Error: ' + err));
-  console.error(chalk.red('Bot will restart...'));
-  start('Devutty.js');
-});
+start('Devutty.js')
