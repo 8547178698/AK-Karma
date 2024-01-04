@@ -78,5 +78,5 @@ process.on('unhandledRejection', () => {
 process.on('uncaughtException', (err) => {
   console.error(chalk.red('Error: ' + err));
   console.error(chalk.red('Bot will restart...'));
-  start('Devuty.js');
+  start('Devutty.js');
 });
