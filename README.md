@@ -25,9 +25,8 @@ Project created by <a href="https://github.com/TheBlackLion17">Devutty_v2</a> to
   
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://replit.com/@TheBlackLion17/Devutty?s=app)
 
-[![Run on Repl.it](https://replit.com/github/TheBlackLion17/Devutty_v2)](https://replit.com/@TheBlackLion17/Devuttyv2)
+[![Run on Repl.it](https://replit.com/github/deploy/button.svg)](https://replit.com/@TheBlackLion17/Devuttyv2?v=1)
 
-Click [SCAN](https://qr-hazel-alpha.vercel.app/md) and scan the QR code through the "WhatsApp Linked Devices" option in your WhatsApp app.
   
 ### The Hard Method
 ```js
