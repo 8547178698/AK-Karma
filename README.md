@@ -37,7 +37,7 @@ $ git clone https://github.com/TheBlackLion17/Devutty_v2
 $ cd Devutty_v2
 $ npm install @adiwajshing/baileys
 $ npm install chalk
-$ node Devutty.js
+$ node index.js
 ```
       
 ```js
@@ -45,7 +45,7 @@ SETUP
 $ git clone https://github.com/TheBlackLion17/Devutty_v2
 $ cd Devutty_v2
 $ npm i
-$ node Devutty.js
+$ node index.js
 ```
 
 ----
